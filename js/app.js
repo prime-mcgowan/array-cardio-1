@@ -161,3 +161,12 @@ const data = [
   "car",
   "truck",
 ];
+
+const transporation = data.reduce(function (obj, item) {
+  if (!obj[item]) {
+    obj[item] = 0;
+  } //this looks to see if there is an object item...if there isn't it starts blank
+  obj[item]++;
+  return obj; //if there is an object item then it's added to the object
+}, {});
+console.log(transporation);
